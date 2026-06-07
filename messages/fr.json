@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "home": "Home",
+    "news": "News",
+    "data": "Data",
+    "search": "Search",
+    "about": "About"
+  },
+  "home": {
+    "latestNews": "Latest News",
+    "salesOverview": "Sales Overview",
+    "chargingProgress": "Charging Progress"
+  },
+  "news": {
+    "allNews": "All News",
+    "readMore": "Read More",
+    "source": "Source",
+    "publishedAt": "Published At"
+  },
+  "data": {
+    "salesTrend": "Sales Trend",
+    "salesByCountry": "Sales by Country",
+    "salesByModel": "Sales by Model",
+    "chargingStations": "Charging Stations"
+  },
+  "search": {
+    "placeholder": "Search news...",
+    "results": "Search Results"
+  },
+  "categories": {
+    "newCar": "New Car Launch",
+    "sales": "Sales Data",
+    "technology": "Technology",
+    "charging": "Charging",
+    "overseas": "Overseas Market"
+  }
+}

@@ -1,4 +1,5 @@
 import { pgTable, serial, varchar, text, timestamp, integer, boolean, jsonb, unique } from 'drizzle-orm/pg-core';
+import { relations } from 'drizzle-orm';
 
 export const categories = pgTable('categories', {
   id: serial('id').primaryKey(),
@@ -24,7 +25,7 @@ export const news = pgTable('news', {
   summary: text('summary'),
   originalUrl: varchar('original_url', { length: 1000 }).notNull(),
   sourceId: integer('source_id').references(() => sources.id),
-  categoryId: integer('category_id').references(() => sources.id),
+  categoryId: integer('category_id').references(() => categories.id),
   imageUrl: varchar('image_url', { length: 1000 }),
   publishedAt: timestamp('published_at').notNull(),
   fetchedAt: timestamp('fetched_at').defaultNow(),
@@ -66,3 +67,27 @@ export const chargingStations = pgTable('charging_stations', {
   status: varchar('status', { length: 50 }),
   updatedAt: timestamp('updated_at').defaultNow(),
 });
+
+export const newsRelations = relations(news, ({ one }) => ({
+  category: one(categories, {
+    fields: [news.categoryId],
+    references: [categories.id],
+  }),
+  source: one(sources, {
+    fields: [news.sourceId],
+    references: [sources.id],
+  }),
+}));
+
+export const sourcesRelations = relations(sources, ({ one, many }) => ({
+  category: one(categories, {
+    fields: [sources.categoryId],
+    references: [categories.id],
+  }),
+  news: many(news),
+}));
+
+export const categoriesRelations = relations(categories, ({ many }) => ({
+  news: many(news),
+  sources: many(sources),
+}));

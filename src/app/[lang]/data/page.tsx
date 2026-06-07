@@ -49,12 +49,12 @@ export default async function DataPage({ params }: { params: Promise<{ lang: str
               {stations.map((s) => (
                 <tr key={s.id} className="border-b border-[#1e1e2e]">
                   <td className="py-3 text-white">{s.country}</td>
-                  <td className="py-3 text-slate-300">{s.stationCount.toLocaleString()}</td>
+                  <td className="py-3 text-slate-300">{(s.stationCount ?? 0).toLocaleString()}</td>
                   <td className="py-3 text-slate-300">{s.targetCount?.toLocaleString() || '-'}</td>
                   <td className="py-3">
                     {s.targetCount && (
                       <div className="w-full bg-slate-700 rounded-full h-2">
-                        <div className="bg-[#e31937] h-2 rounded-full" style={{ width: `${Math.min((s.stationCount / s.targetCount) * 100, 100)}%` }} />
+                        <div className="bg-[#e31937] h-2 rounded-full" style={{ width: `${Math.min(((s.stationCount ?? 0) / s.targetCount) * 100, 100)}%` }} />
                       </div>
                     )}
                   </td>
