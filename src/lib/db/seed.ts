@@ -15,6 +15,9 @@ async function seed() {
   await db.insert(sources).values([
     { name: 'BYD Official', rssUrl: 'https://www.byd.com/en/news/rss', categoryId: 1, isActive: true },
     { name: 'CnEVPost', rssUrl: 'https://cnevpost.com/feed/', categoryId: 2, isActive: true },
+    { name: 'Electrek', rssUrl: 'https://electrek.co/feed/', categoryId: 1, isActive: true },
+    { name: 'InsideEVs', rssUrl: 'https://insideevs.com/rss.xml', categoryId: 3, isActive: true },
+    { name: 'CleanTechnica', rssUrl: 'https://cleantechnica.com/feed/', categoryId: 3, isActive: true },
   ]).onConflictDoNothing();
 
   console.log('Seeding sales data...');
