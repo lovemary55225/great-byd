@@ -4,6 +4,7 @@ import { salesData, chargingStations } from '@/lib/db/schema';
 import { sql } from 'drizzle-orm';
 import SalesTrendChart from '@/components/charts/SalesTrendChart';
 import SalesRankChart from '@/components/charts/SalesRankChart';
+import ModelComparisonChart from '@/components/charts/ModelComparisonChart';
 
 export default async function DataPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -19,6 +20,12 @@ export default async function DataPage({ params }: { params: Promise<{ lang: str
     sales: sql<number>`SUM(${salesData.salesCount})`,
   }).from(salesData).groupBy(salesData.country).orderBy(sql`SUM(${salesData.salesCount}) DESC`).limit(10);
 
+  const modelData = await db.select({
+    model: salesData.vehicleModel,
+    china: sql<number>`SUM(CASE WHEN ${salesData.country} = 'China' THEN ${salesData.salesCount} ELSE 0 END)`,
+    overseas: sql<number>`SUM(CASE WHEN ${salesData.country} != 'China' THEN ${salesData.salesCount} ELSE 0 END)`,
+  }).from(salesData).groupBy(salesData.vehicleModel).orderBy(sql`SUM(${salesData.salesCount}) DESC`).limit(8);
+
   const stations = await db.select().from(chargingStations).orderBy(chargingStations.country);
 
   return (
@@ -33,6 +40,11 @@ export default async function DataPage({ params }: { params: Promise<{ lang: str
           <h2 className="text-lg font-semibold text-white mb-4">{t('salesByCountry')}</h2>
           <SalesRankChart data={rankData.map((d) => ({ country: d.country, sales: Number(d.sales) }))} />
         </div>
+      </div>
+
+      <div className="bg-[#13131f] border border-[#1e1e2e] rounded-xl p-6 mb-8">
+        <h2 className="text-lg font-semibold text-white mb-4">{t('salesByModel')}</h2>
+        <ModelComparisonChart data={modelData.map((d) => ({ model: d.model ?? 'Unknown', china: Number(d.china), overseas: Number(d.overseas) }))} />
       </div>
 
       <div className="bg-[#13131f] border border-[#1e1e2e] rounded-xl p-6">

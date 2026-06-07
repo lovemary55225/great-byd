@@ -1,9 +1,33 @@
 import Parser from 'rss-parser';
+import * as cheerio from 'cheerio';
 import { db } from '@/lib/db';
 import { news, sources } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
+import { autoClassify } from './classifier';
 
 const rssParser = new Parser();
+
+async function extractArticleContent(url: string) {
+  try {
+    const response = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+    const html = await response.text();
+    const $ = cheerio.load(html);
+
+    // Remove script and style elements
+    $('script, style, nav, footer, header, aside').remove();
+
+    // Try to find main content
+    const content = $('article').text() || $('main').text() || $('.content').text() || $('p').text();
+    const image = $('article img').first().attr('src') || $('main img').first().attr('src') || $('meta[property="og:image"]').attr('content');
+
+    return {
+      content: content.trim().slice(0, 2000),
+      image: image || null,
+    };
+  } catch (error) {
+    return { content: null, image: null };
+  }
+}
 
 export async function fetchNewsFromRSS() {
   const activeSources = await db.query.sources.findMany({
@@ -29,12 +53,23 @@ export async function fetchNewsFromRSS() {
 
         if (existing) continue;
 
+        // Extract additional content if summary is missing
+        let summary = item.contentSnippet?.slice(0, 500) || null;
+        let imageUrl = null;
+
+        if (!summary && item.link) {
+          const extracted = await extractArticleContent(item.link);
+          summary = extracted.content?.slice(0, 500) || null;
+          imageUrl = extracted.image;
+        }
+
         const newArticle = await db.insert(news).values({
           title: item.title,
-          summary: item.contentSnippet?.slice(0, 500) || null,
+          summary,
           originalUrl: item.link,
           sourceId: source.id,
-          categoryId: source.categoryId,
+          categoryId: source.categoryId || autoClassify(item.title, summary) || 1,
+          imageUrl: imageUrl || item.enclosure?.url || null,
           publishedAt: item.pubDate ? new Date(item.pubDate) : new Date(),
           slug,
         }).returning();
