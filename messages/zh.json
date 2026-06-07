@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "home": "首页",
+    "news": "新闻",
+    "data": "数据",
+    "search": "搜索",
+    "about": "关于"
+  },
+  "home": {
+    "latestNews": "最新资讯",
+    "salesOverview": "销量概览",
+    "chargingProgress": "闪充桩进度"
+  },
+  "news": {
+    "allNews": "全部新闻",
+    "readMore": "阅读更多",
+    "source": "来源",
+    "publishedAt": "发布时间"
+  },
+  "data": {
+    "salesTrend": "销量趋势",
+    "salesByCountry": "各国销量排行",
+    "salesByModel": "车型销量排行",
+    "chargingStations": "充电站分布"
+  },
+  "search": {
+    "placeholder": "搜索新闻...",
+    "results": "搜索结果"
+  },
+  "categories": {
+    "newCar": "新车发布",
+    "sales": "销量数据",
+    "technology": "技术发布",
+    "charging": "闪充桩",
+    "overseas": "海外市场"
+  }
+}
