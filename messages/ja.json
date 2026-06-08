@@ -4,7 +4,11 @@
     "news": "News",
     "data": "Data",
     "search": "Search",
-    "about": "About"
+    "about": "About",
+    "login": "ログイン",
+    "register": "登録",
+    "logout": "ログアウト",
+    "favorites": "お気に入り"
   },
   "home": {
     "latestNews": "Latest News",
@@ -33,5 +37,9 @@
     "technology": "Technology",
     "charging": "Charging",
     "overseas": "Overseas Market"
+  },
+  "favorites": {
+    "title": "お気に入り一覧",
+    "empty": "まだお気に入りがありません。"
   }
 }

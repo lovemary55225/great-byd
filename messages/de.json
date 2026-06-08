@@ -4,7 +4,11 @@
     "news": "News",
     "data": "Data",
     "search": "Search",
-    "about": "About"
+    "about": "About",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "logout": "Abmelden",
+    "favorites": "Favoriten"
   },
   "home": {
     "latestNews": "Latest News",
@@ -33,5 +37,9 @@
     "technology": "Technology",
     "charging": "Charging",
     "overseas": "Overseas Market"
+  },
+  "favorites": {
+    "title": "Meine Favoriten",
+    "empty": "Noch keine Favoriten."
   }
 }

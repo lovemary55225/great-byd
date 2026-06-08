@@ -4,7 +4,11 @@
     "news": "News",
     "data": "Data",
     "search": "Search",
-    "about": "About"
+    "about": "About",
+    "login": "로그인",
+    "register": "회원가입",
+    "logout": "로그아웃",
+    "favorites": "즐겨찾기"
   },
   "home": {
     "latestNews": "Latest News",
@@ -33,5 +37,9 @@
     "technology": "Technology",
     "charging": "Charging",
     "overseas": "Overseas Market"
+  },
+  "favorites": {
+    "title": "나의 즐겨찾기",
+    "empty": "즐겨찾기가 없습니다."
   }
 }

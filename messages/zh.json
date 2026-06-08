@@ -4,7 +4,11 @@
     "news": "新闻",
     "data": "数据",
     "search": "搜索",
-    "about": "关于"
+    "about": "关于",
+    "login": "登录",
+    "register": "注册",
+    "logout": "退出",
+    "favorites": "收藏"
   },
   "home": {
     "latestNews": "最新资讯",
@@ -33,5 +37,9 @@
     "technology": "技术发布",
     "charging": "闪充桩",
     "overseas": "海外市场"
+  },
+  "favorites": {
+    "title": "我的收藏",
+    "empty": "暂无收藏。"
   }
 }
