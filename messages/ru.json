@@ -1,45 +1,199 @@
 {
   "nav": {
-    "home": "Home",
-    "news": "News",
-    "data": "Data",
-    "search": "Search",
-    "about": "About",
+    "home": "Главная",
+    "news": "Новости",
+    "data": "Данные",
+    "search": "Поиск",
+    "about": "О нас",
     "login": "Вход",
     "register": "Регистрация",
     "logout": "Выход",
     "favorites": "Избранное"
   },
   "home": {
-    "latestNews": "Latest News",
-    "salesOverview": "Sales Overview",
-    "chargingProgress": "Charging Progress"
+    "latestNews": "Последние Новости",
+    "salesOverview": "Обзор Продаж",
+    "chargingProgress": "Прогресс Зарядки",
+    "hero": {
+      "badge": "Глобальная Аналитика BYD",
+      "title": "Отслеживайте",
+      "titleHighlight": "Глобальный Взлёт",
+      "subtitle": "Агрегация новостей в реальном времени, аналитика продаж и рыночная аналитика для ведущего мирового производителя электромобилей.",
+      "ctaNews": "Смотреть Новости",
+      "ctaData": "Смотреть Данные",
+      "stat": {
+        "marketsLabel": "Рынки",
+        "salesLabel": "Годовые Продажи",
+        "chargingLabel": "Зарядные Станции"
+      }
+    },
+    "kpi": {
+      "globalMarkets": "Глобальные Рынки",
+      "globalMarketsChange": "3 новых",
+      "chargingStations": "Зарядные Станции"
+    },
+    "emptyState": {
+      "title": "Пока нет новостей",
+      "description": "Новостные статьи появятся здесь после получения из RSS-источников."
+    }
   },
   "news": {
-    "allNews": "All News",
-    "readMore": "Read More",
-    "source": "Source",
-    "publishedAt": "Published At"
+    "allNews": "Все Новости",
+    "readMore": "Читать Далее",
+    "source": "Источник",
+    "publishedAt": "Опубликовано",
+    "pageDescription": "Будьте в курсе последних событий BYD по всему миру.",
+    "filter": {
+      "all": "Все"
+    },
+    "emptyState": {
+      "title": "Статьи не найдены",
+      "description": "Попробуйте выбрать другую категорию или зайдите позже."
+    }
+  },
+  "newsDetail": {
+    "originalLink": "Оригинальная Статья →",
+    "comments": "Комментарии"
   },
   "data": {
-    "salesTrend": "Sales Trend",
-    "salesByCountry": "Sales by Country",
-    "salesByModel": "Sales by Model",
-    "chargingStations": "Charging Stations"
+    "salesTrend": "Тренд Продаж",
+    "salesByCountry": "Продажи по Странам",
+    "salesByModel": "Продажи по Моделям",
+    "chargingStations": "Зарядные Станции",
+    "pageDescription": "Комплексная аналитика продаж и данные по инфраструктуре зарядки.",
+    "chart": {
+      "salesTrendDesc": "Ежемесячный объём глобальных продаж",
+      "salesByCountryDesc": "Крупнейшие рынки по объёму",
+      "salesByModelDesc": "Сравнение продаж Китай vs Зарубеж",
+      "chargingDesc": "Прогресс глобальной инфраструктуры зарядки"
+    },
+    "table": {
+      "country": "Страна",
+      "stations": "Станции",
+      "target": "Цель",
+      "progress": "Прогресс",
+      "status": "Статус"
+    }
   },
   "search": {
-    "placeholder": "Search news...",
-    "results": "Search Results"
+    "placeholder": "Поиск новостей...",
+    "results": "Результаты Поиска"
   },
   "categories": {
-    "newCar": "New Car Launch",
-    "sales": "Sales Data",
-    "technology": "Technology",
-    "charging": "Charging",
-    "overseas": "Overseas Market"
+    "new-car": "Новый Автомобиль",
+    "sales": "Продажи",
+    "technology": "Технологии",
+    "charging": "Зарядка",
+    "overseas": "Зарубеж"
   },
   "favorites": {
-    "title": "Моё избранное",
+    "title": "Моё Избранное",
     "empty": "Пока нет избранного."
+  },
+  "login": {
+    "title": "Вход",
+    "emailLabel": "Эл. почта",
+    "passwordLabel": "Пароль",
+    "loggingIn": "Вход...",
+    "errorInvalid": "Неверная эл. почта или пароль",
+    "noAccount": "Нет аккаунта?",
+    "registerLink": "Регистрация"
+  },
+  "register": {
+    "title": "Регистрация",
+    "nameLabel": "Имя",
+    "emailLabel": "Эл. почта",
+    "passwordLabel": "Пароль",
+    "registering": "Регистрация...",
+    "errorFailed": "Ошибка регистрации",
+    "hasAccount": "Уже есть аккаунт?",
+    "loginLink": "Вход"
+  },
+  "about": {
+    "title": "О Great BYD",
+    "intro1": "Great BYD — независимая платформа агрегации новостей, посвящённая отслеживанию глобальных автомобильных разработок BYD.",
+    "intro2": "Мы собираем и курируем новости из официальных каналов BYD, автомобильных СМИ и открытых источников данных по всему миру, охватывая:",
+    "list": {
+      "newCar": "Запуски новых моделей и обновления продуктов",
+      "salesData": "Глобальные данные о продажах и анализ рынка",
+      "technology": "Технологические прорывы и инновации",
+      "charging": "Расширение инфраструктуры зарядки",
+      "overseas": "Стратегии выхода на зарубежные рынки"
+    },
+    "dataSources": {
+      "title": "Источники Данных",
+      "description": "Новостные статьи агрегируются из RSS-лент и публичных API. Данные о продажах собираются из официальных отраслевых отчётов и автомобильных ассоциаций соответствующих стран."
+    },
+    "disclaimer": {
+      "title": "Отказ от Ответственности",
+      "description": "Это неофициальный фанатский проект. Все данные и новости взяты из общедоступной информации. BYD и связанные товарные знаки принадлежат их владельцам."
+    }
+  },
+  "comments": {
+    "title": "Комментарии",
+    "placeholder": {
+      "write": "Написать комментарий...",
+      "login": "Войдите, чтобы комментировать",
+      "reply": "Написать ответ..."
+    },
+    "replyPlaceholder": "Написать ответ...",
+    "postButton": "Опубликовать Комментарий",
+    "anonymous": "Аноним",
+    "replyButton": "Ответить",
+    "cancelButton": "Отмена"
+  },
+  "favorite": {
+    "saved": "Сохранено",
+    "save": "Сохранить"
+  },
+  "subscribe": {
+    "title": "Подписаться",
+    "description": "Получайте последние новости BYD на свой почтовый ящик.",
+    "emailPlaceholder": "your@email.com",
+    "placeholder": "your@email.com",
+    "button": "Подписаться",
+    "submit": "Подписаться",
+    "successMessage": "Подписка оформлена успешно!",
+    "success": "Подписка оформлена успешно!",
+    "errorMessage": "Ошибка подписки",
+    "error": "Ошибка подписки",
+    "genericError": "Произошла ошибка"
+  },
+  "footer": {
+    "brandDescription": "Независимая глобальная платформа агрегации новостей и аналитики данных для автомобильных разработок BYD. Отслеживание продаж, технологий и расширения рынка в более чем 78 странах.",
+    "feature": {
+      "languages": "10 Языков",
+      "realtime": "Данные в Реальном Времени",
+      "aiTranslation": "Перевод с ИИ"
+    },
+    "links": {
+      "platform": "Платформа",
+      "latestNews": "Последние Новости",
+      "dataDashboard": "Панель Данных",
+      "search": "Поиск",
+      "about": "О нас"
+    },
+    "allRightsReserved": "Все права защищены.",
+    "dataSource": "Данные получены из открытых новостей и официальных отчётов BYD."
+  },
+  "error": {
+    "title": "Что-то пошло не так!",
+    "retryButton": "Попробовать снова"
+  },
+  "loading": "Загрузка...",
+  "common": {
+    "category": {
+      "news": "Новости"
+    },
+    "unknown": "Неизвестно",
+    "errorOccurred": "Произошла ошибка",
+    "emptyStateTitle": "Пока нет контента",
+    "emptyStateDescription": "Загляните позже для обновлений."
+  },
+  "time": {
+    "justNow": "только что",
+    "minutesAgo": "мин",
+    "hoursAgo": "ч",
+    "daysAgo": "д"
   }
 }

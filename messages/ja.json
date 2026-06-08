@@ -1,45 +1,199 @@
 {
   "nav": {
-    "home": "Home",
-    "news": "News",
-    "data": "Data",
-    "search": "Search",
-    "about": "About",
+    "home": "ホーム",
+    "news": "ニュース",
+    "data": "データ",
+    "search": "検索",
+    "about": "概要",
     "login": "ログイン",
     "register": "登録",
     "logout": "ログアウト",
     "favorites": "お気に入り"
   },
   "home": {
-    "latestNews": "Latest News",
-    "salesOverview": "Sales Overview",
-    "chargingProgress": "Charging Progress"
+    "latestNews": "最新ニュース",
+    "salesOverview": "販売概要",
+    "chargingProgress": "充電ステーション進捗",
+    "hero": {
+      "badge": "グローバルBYDインテリジェンス",
+      "title": "BYDの",
+      "titleHighlight": "グローバル躍進",
+      "subtitle": "世界をリードするNEVメーカーのためのリアルタイムニュース集約、販売分析、市場インテリジェンス。",
+      "ctaNews": "ニュースを見る",
+      "ctaData": "データを見る",
+      "stat": {
+        "marketsLabel": "市場",
+        "salesLabel": "年間販売台数",
+        "chargingLabel": "充電ステーション"
+      }
+    },
+    "kpi": {
+      "globalMarkets": "グローバル市場",
+      "globalMarketsChange": "3件追加",
+      "chargingStations": "充電ステーション"
+    },
+    "emptyState": {
+      "title": "ニュースはまだありません",
+      "description": "RSSソースから取得されたニュース記事がここに表示されます。"
+    }
   },
   "news": {
-    "allNews": "All News",
-    "readMore": "Read More",
-    "source": "Source",
-    "publishedAt": "Published At"
+    "allNews": "すべてのニュース",
+    "readMore": "続きを読む",
+    "source": "ソース",
+    "publishedAt": "公開日",
+    "pageDescription": "世界中のBYDの最新動向をお届けします。",
+    "filter": {
+      "all": "すべて"
+    },
+    "emptyState": {
+      "title": "記事が見つかりません",
+      "description": "別のカテゴリを選択するか、後でもう一度お試しください。"
+    }
+  },
+  "newsDetail": {
+    "originalLink": "元記事 →",
+    "comments": "コメント"
   },
   "data": {
-    "salesTrend": "Sales Trend",
-    "salesByCountry": "Sales by Country",
-    "salesByModel": "Sales by Model",
-    "chargingStations": "Charging Stations"
+    "salesTrend": "販売トレンド",
+    "salesByCountry": "国別販売",
+    "salesByModel": "モデル別販売",
+    "chargingStations": "充電ステーション",
+    "pageDescription": "包括的な販売分析と充電インフラデータ。",
+    "chart": {
+      "salesTrendDesc": "月間グローバル販売台数",
+      "salesByCountryDesc": "販売台数別トップ市場",
+      "salesByModelDesc": "中国と海外の販売比較",
+      "chargingDesc": "グローバル充電インフラの進捗"
+    },
+    "table": {
+      "country": "国",
+      "stations": "ステーション",
+      "target": "目標",
+      "progress": "進捗",
+      "status": "ステータス"
+    }
   },
   "search": {
-    "placeholder": "Search news...",
-    "results": "Search Results"
+    "placeholder": "ニュースを検索...",
+    "results": "検索結果"
   },
   "categories": {
-    "newCar": "New Car Launch",
-    "sales": "Sales Data",
-    "technology": "Technology",
-    "charging": "Charging",
-    "overseas": "Overseas Market"
+    "new-car": "新車",
+    "sales": "販売",
+    "technology": "テクノロジー",
+    "charging": "充電",
+    "overseas": "海外"
   },
   "favorites": {
     "title": "お気に入り一覧",
     "empty": "まだお気に入りがありません。"
+  },
+  "login": {
+    "title": "ログイン",
+    "emailLabel": "メールアドレス",
+    "passwordLabel": "パスワード",
+    "loggingIn": "ログイン中...",
+    "errorInvalid": "メールアドレスまたはパスワードが無効です",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "registerLink": "登録"
+  },
+  "register": {
+    "title": "登録",
+    "nameLabel": "名前",
+    "emailLabel": "メールアドレス",
+    "passwordLabel": "パスワード",
+    "registering": "登録中...",
+    "errorFailed": "登録に失敗しました",
+    "hasAccount": "すでにアカウントをお持ちですか？",
+    "loginLink": "ログイン"
+  },
+  "about": {
+    "title": "Great BYDについて",
+    "intro1": "Great BYDは、BYDのグローバル自動車開発を追跡する独立したニュース集約プラットフォームです。",
+    "intro2": "BYD公式チャンネル、自動車メディア、世界中の公開データソースからニュースを収集・キュレーションし、以下をカバーしています：",
+    "list": {
+      "newCar": "新車発売および製品アップデート",
+      "salesData": "グローバル販売データと市場分析",
+      "technology": "技術的ブレークスルーとイノベーション",
+      "charging": "充電インフラの拡大",
+      "overseas": "海外市場進出戦略"
+    },
+    "dataSources": {
+      "title": "データソース",
+      "description": "ニュース記事はRSSフィードおよび公開APIから集約されています。販売データは各国の公式業界レポートおよび自動車協会から編集されています。"
+    },
+    "disclaimer": {
+      "title": "免責事項",
+      "description": "これは非公式のファンプロジェクトです。すべてのデータとニュースは公開情報からのものです。BYDおよび関連商標はそれぞれの所有者に帰属します。"
+    }
+  },
+  "comments": {
+    "title": "コメント",
+    "placeholder": {
+      "write": "コメントを書く...",
+      "login": "ログインしてコメントする",
+      "reply": "返信を書く..."
+    },
+    "replyPlaceholder": "返信を書く...",
+    "postButton": "コメントを投稿",
+    "anonymous": "匿名",
+    "replyButton": "返信",
+    "cancelButton": "キャンセル"
+  },
+  "favorite": {
+    "saved": "保存済み",
+    "save": "保存"
+  },
+  "subscribe": {
+    "title": "購読",
+    "description": "最新のBYDニュースをメールボックスにお届けします。",
+    "emailPlaceholder": "your@email.com",
+    "placeholder": "your@email.com",
+    "button": "購読",
+    "submit": "購読",
+    "successMessage": "購読が完了しました！",
+    "success": "購読が完了しました！",
+    "errorMessage": "購読に失敗しました",
+    "error": "購読に失敗しました",
+    "genericError": "エラーが発生しました"
+  },
+  "footer": {
+    "brandDescription": "BYD自動車開発のための独立したグローバルニュース集約・データインテリジェンスプラットフォーム。78カ国以上での販売、技術、市場拡大を追跡。",
+    "feature": {
+      "languages": "10言語",
+      "realtime": "リアルタイムデータ",
+      "aiTranslation": "AI翻訳"
+    },
+    "links": {
+      "platform": "プラットフォーム",
+      "latestNews": "最新ニュース",
+      "dataDashboard": "データダッシュボード",
+      "search": "検索",
+      "about": "概要"
+    },
+    "allRightsReserved": "All rights reserved.",
+    "dataSource": "データは公開ニュースおよびBYD公式レポートから取得しています。"
+  },
+  "error": {
+    "title": "エラーが発生しました！",
+    "retryButton": "再試行"
+  },
+  "loading": "読み込み中...",
+  "common": {
+    "category": {
+      "news": "ニュース"
+    },
+    "unknown": "不明",
+    "errorOccurred": "エラーが発生しました",
+    "emptyStateTitle": "まだコンテンツがありません",
+    "emptyStateDescription": "更新を後で確認してください。"
+  },
+  "time": {
+    "justNow": "たった今",
+    "minutesAgo": "分前",
+    "hoursAgo": "時間前",
+    "daysAgo": "日前"
   }
 }

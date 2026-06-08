@@ -1,45 +1,199 @@
 {
   "nav": {
-    "home": "Home",
-    "news": "News",
-    "data": "Data",
-    "search": "Search",
-    "about": "About",
+    "home": "الرئيسية",
+    "news": "أخبار",
+    "data": "بيانات",
+    "search": "بحث",
+    "about": "حول",
     "login": "تسجيل الدخول",
     "register": "التسجيل",
     "logout": "تسجيل الخروج",
     "favorites": "المفضلة"
   },
   "home": {
-    "latestNews": "Latest News",
-    "salesOverview": "Sales Overview",
-    "chargingProgress": "Charging Progress"
+    "latestNews": "أحدث الأخبار",
+    "salesOverview": "نظرة عامة على المبيعات",
+    "chargingProgress": "تقدم الشحن",
+    "hero": {
+      "badge": "الاستخبارات العالمية لـ BYD",
+      "title": "تتبع صعود BYD",
+      "titleHighlight": "العالمي",
+      "subtitle": "تجميع الأخبار في الوقت الفعلي، وتحليلات المبيعات، والاستخبارات السوقية لأكبر مصنع للمركبات الكهربائية الجديدة في العالم.",
+      "ctaNews": "استكشف الأخبار",
+      "ctaData": "عرض البيانات",
+      "stat": {
+        "marketsLabel": "الأسواق",
+        "salesLabel": "المبيعات السنوية",
+        "chargingLabel": "محطات الشحن"
+      }
+    },
+    "kpi": {
+      "globalMarkets": "الأسواق العالمية",
+      "globalMarketsChange": "3 جديدة",
+      "chargingStations": "محطات الشحن"
+    },
+    "emptyState": {
+      "title": "لا توجد أخبار بعد",
+      "description": "ستظهر مقالات الأخبار هنا بمجرد جلبها من مصادر RSS."
+    }
   },
   "news": {
-    "allNews": "All News",
-    "readMore": "Read More",
-    "source": "Source",
-    "publishedAt": "Published At"
+    "allNews": "جميع الأخبار",
+    "readMore": "اقرأ المزيد",
+    "source": "المصدر",
+    "publishedAt": "تاريخ النشر",
+    "pageDescription": "ابقَ على اطلاع بأحدث تطورات BYD في جميع أنحاء العالم.",
+    "filter": {
+      "all": "الكل"
+    },
+    "emptyState": {
+      "title": "لم يتم العثور على مقالات",
+      "description": "حاول اختيار فئة مختلفة أو تحقق لاحقًا."
+    }
+  },
+  "newsDetail": {
+    "originalLink": "المقال الأصلي →",
+    "comments": "تعليقات"
   },
   "data": {
-    "salesTrend": "Sales Trend",
-    "salesByCountry": "Sales by Country",
-    "salesByModel": "Sales by Model",
-    "chargingStations": "Charging Stations"
+    "salesTrend": "اتجاه المبيعات",
+    "salesByCountry": "المبيعات حسب الدولة",
+    "salesByModel": "المبيعات حسب الموديل",
+    "chargingStations": "محطات الشحن",
+    "pageDescription": "تحليلات شاملة للمبيعات وبيانات البنية التحتية للشحن.",
+    "chart": {
+      "salesTrendDesc": "حجم المبيعات العالمية الشهرية",
+      "salesByCountryDesc": "أكبر الأسواق من حيث الحجم",
+      "salesByModelDesc": "مقارنة مبيعات الصين والخارج",
+      "chargingDesc": "تقدم البنية التحتية للشحن العالمية"
+    },
+    "table": {
+      "country": "الدولة",
+      "stations": "المحطات",
+      "target": "الهدف",
+      "progress": "التقدم",
+      "status": "الحالة"
+    }
   },
   "search": {
-    "placeholder": "Search news...",
-    "results": "Search Results"
+    "placeholder": "البحث في الأخبار...",
+    "results": "نتائج البحث"
   },
   "categories": {
-    "newCar": "New Car Launch",
-    "sales": "Sales Data",
-    "technology": "Technology",
-    "charging": "Charging",
-    "overseas": "Overseas Market"
+    "new-car": "سيارة جديدة",
+    "sales": "مبيعات",
+    "technology": "تكنولوجيا",
+    "charging": "شحن",
+    "overseas": "خارجي"
   },
   "favorites": {
     "title": "المفضلة",
     "empty": "لا توجد مفضلات بعد."
+  },
+  "login": {
+    "title": "تسجيل الدخول",
+    "emailLabel": "البريد الإلكتروني",
+    "passwordLabel": "كلمة المرور",
+    "loggingIn": "جاري تسجيل الدخول...",
+    "errorInvalid": "البريد الإلكتروني أو كلمة المرور غير صالحة",
+    "noAccount": "ليس لديك حساب؟",
+    "registerLink": "التسجيل"
+  },
+  "register": {
+    "title": "التسجيل",
+    "nameLabel": "الاسم",
+    "emailLabel": "البريد الإلكتروني",
+    "passwordLabel": "كلمة المرور",
+    "registering": "جاري التسجيل...",
+    "errorFailed": "فشل التسجيل",
+    "hasAccount": "لديك حساب بالفعل؟",
+    "loginLink": "تسجيل الدخول"
+  },
+  "about": {
+    "title": "حول Great BYD",
+    "intro1": "Great BYD هي منصة مستقلة لتجميع الأخبار مكرسة لتتبع التطورات العالمية لـ BYD في مجال السيارات.",
+    "intro2": "نقوم بجمع وتحرير الأخبار من قنوات BYD الرسمية ووسائل الإعلام المتخصصة بالسيارات ومصادر البيانات العامة حول العالم، ونغطي:",
+    "list": {
+      "newCar": "إطلاق المركبات الجديدة وتحديثات المنتجات",
+      "salesData": "بيانات المبيعات العالمية وتحليل السوق",
+      "technology": "الاختراقات التكنولوجية والابتكارات",
+      "charging": "توسع البنية التحتية للشحن",
+      "overseas": "استراتيجيات دخول الأسواق الخارجية"
+    },
+    "dataSources": {
+      "title": "مصادر البيانات",
+      "description": "يتم تجميع مقالات الأخبار من خلال خلاصات RSS وواجهات برمجة التطبيقات العامة. يتم تجميع بيانات المبيعات من التقارير الرسمية للصناعة وجمعيات السيارات في الدول المعنية."
+    },
+    "disclaimer": {
+      "title": "إخلاء المسؤولية",
+      "description": "هذا مشروع غير رسمي من المعجبين. جميع البيانات والأخبار مأخوذة من معلومات متاحة للجمهور. BYD والعلامات التجارية ذات الصلة تخص مالكيها."
+    }
+  },
+  "comments": {
+    "title": "تعليقات",
+    "placeholder": {
+      "write": "اكتب تعليقًا...",
+      "login": "سجل الدخول للتعليق",
+      "reply": "اكتب ردًا..."
+    },
+    "replyPlaceholder": "اكتب ردًا...",
+    "postButton": "نشر التعليق",
+    "anonymous": "مجهول",
+    "replyButton": "رد",
+    "cancelButton": "إلغاء"
+  },
+  "favorite": {
+    "saved": "تم الحفظ",
+    "save": "حفظ"
+  },
+  "subscribe": {
+    "title": "اشتراك",
+    "description": "احصل على أحدث أخبار BYD في صندوق بريدك.",
+    "emailPlaceholder": "your@email.com",
+    "placeholder": "your@email.com",
+    "button": "اشتراك",
+    "submit": "اشتراك",
+    "successMessage": "تم الاشتراك بنجاح!",
+    "success": "تم الاشتراك بنجاح!",
+    "errorMessage": "فشل الاشتراك",
+    "error": "فشل الاشتراك",
+    "genericError": "حدث خطأ"
+  },
+  "footer": {
+    "brandDescription": "منصة مستقلة لتجميع الأخبار العالمية والاستخبارات البيانية المتعلقة بتطورات BYD في مجال السيارات. نتتبع المبيعات والتكنولوجيا وامتداد السوق في أكثر من 78 دولة.",
+    "feature": {
+      "languages": "10 لغات",
+      "realtime": "بيانات في الوقت الفعلي",
+      "aiTranslation": "الترجمة بالذكاء الاصطناعي"
+    },
+    "links": {
+      "platform": "المنصة",
+      "latestNews": "أحدث الأخبار",
+      "dataDashboard": "لوحة البيانات",
+      "search": "بحث",
+      "about": "حول"
+    },
+    "allRightsReserved": "جميع الحقوق محفوظة.",
+    "dataSource": "البيانات مأخوذة من الأخبار العامة والتقارير الرسمية لـ BYD."
+  },
+  "error": {
+    "title": "حدث خطأ ما!",
+    "retryButton": "حاول مرة أخرى"
+  },
+  "loading": "جاري التحميل...",
+  "common": {
+    "category": {
+      "news": "أخبار"
+    },
+    "unknown": "غير معروف",
+    "errorOccurred": "حدث خطأ",
+    "emptyStateTitle": "لا يوجد محتوى بعد",
+    "emptyStateDescription": "تحقق لاحقًا للحصول على التحديثات."
+  },
+  "time": {
+    "justNow": "الآن",
+    "minutesAgo": "د",
+    "hoursAgo": "س",
+    "daysAgo": "ي"
   }
 }

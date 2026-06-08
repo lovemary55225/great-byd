@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Car, BarChart3, Cpu, Zap, Globe } from 'lucide-react';
 
 const categories = [
@@ -14,6 +14,7 @@ const categories = [
 
 export default function CategoryPills() {
   const locale = useLocale();
+  const t = useTranslations('categories');
 
   return (
     <section className="mb-10">
@@ -27,7 +28,7 @@ export default function CategoryPills() {
               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl border bg-gradient-to-br ${cat.color} hover:scale-105 transition-transform`}
             >
               <Icon className="w-4 h-4" />
-              <span className="text-sm font-medium">{cat.label}</span>
+              <span className="text-sm font-medium">{t(cat.slug)}</span>
             </Link>
           );
         })}

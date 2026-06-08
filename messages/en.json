@@ -13,33 +13,187 @@
   "home": {
     "latestNews": "Latest News",
     "salesOverview": "Sales Overview",
-    "chargingProgress": "Charging Progress"
+    "chargingProgress": "Charging Progress",
+    "hero": {
+      "badge": "Global BYD Intelligence",
+      "title": "Track BYD's",
+      "titleHighlight": "Global Rise",
+      "subtitle": "Real-time news aggregation, sales analytics, and market intelligence for the world's leading NEV manufacturer.",
+      "ctaNews": "Explore News",
+      "ctaData": "View Data",
+      "stat": {
+        "marketsLabel": "Markets",
+        "salesLabel": "Annual Sales",
+        "chargingLabel": "Charging Stations"
+      }
+    },
+    "kpi": {
+      "globalMarkets": "Global Markets",
+      "globalMarketsChange": "3 new",
+      "chargingStations": "Charging Stations"
+    },
+    "emptyState": {
+      "title": "No news yet",
+      "description": "News articles will appear here once they are fetched from RSS sources."
+    }
   },
   "news": {
     "allNews": "All News",
     "readMore": "Read More",
     "source": "Source",
-    "publishedAt": "Published At"
+    "publishedAt": "Published At",
+    "pageDescription": "Stay updated with the latest BYD developments worldwide.",
+    "filter": {
+      "all": "All"
+    },
+    "emptyState": {
+      "title": "No articles found",
+      "description": "Try selecting a different category or check back later."
+    }
+  },
+  "newsDetail": {
+    "originalLink": "Original Article →",
+    "comments": "Comments"
   },
   "data": {
     "salesTrend": "Sales Trend",
     "salesByCountry": "Sales by Country",
     "salesByModel": "Sales by Model",
-    "chargingStations": "Charging Stations"
+    "chargingStations": "Charging Stations",
+    "pageDescription": "Comprehensive sales analytics and charging infrastructure data.",
+    "chart": {
+      "salesTrendDesc": "Monthly global sales volume",
+      "salesByCountryDesc": "Top markets by volume",
+      "salesByModelDesc": "China vs Overseas sales comparison",
+      "chargingDesc": "Global charging infrastructure progress"
+    },
+    "table": {
+      "country": "Country",
+      "stations": "Stations",
+      "target": "Target",
+      "progress": "Progress",
+      "status": "Status"
+    }
   },
   "search": {
     "placeholder": "Search news...",
     "results": "Search Results"
   },
   "categories": {
-    "newCar": "New Car Launch",
-    "sales": "Sales Data",
+    "new-car": "New Car",
+    "sales": "Sales",
     "technology": "Technology",
     "charging": "Charging",
-    "overseas": "Overseas Market"
+    "overseas": "Overseas"
   },
   "favorites": {
     "title": "My Favorites",
     "empty": "No favorites yet."
+  },
+  "login": {
+    "title": "Login",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "loggingIn": "Logging in...",
+    "errorInvalid": "Invalid email or password",
+    "noAccount": "Don't have an account?",
+    "registerLink": "Register"
+  },
+  "register": {
+    "title": "Register",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "registering": "Registering...",
+    "errorFailed": "Registration failed",
+    "hasAccount": "Already have an account?",
+    "loginLink": "Login"
+  },
+  "about": {
+    "title": "About Great BYD",
+    "intro1": "Great BYD is an independent news aggregation platform dedicated to tracking BYD's global automotive developments.",
+    "intro2": "We collect and curate news from official BYD channels, automotive media, and public data sources worldwide, covering:",
+    "list": {
+      "newCar": "New vehicle launches and product updates",
+      "salesData": "Global sales data and market analysis",
+      "technology": "Technology breakthroughs and innovations",
+      "charging": "Charging infrastructure expansion",
+      "overseas": "Overseas market entry strategies"
+    },
+    "dataSources": {
+      "title": "Data Sources",
+      "description": "News articles are aggregated from RSS feeds and public APIs. Sales data is compiled from official industry reports and automotive associations in respective countries."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "description": "This is an unofficial fan project. All data and news are sourced from publicly available information. BYD and related trademarks belong to their respective owners."
+    }
+  },
+  "comments": {
+    "title": "Comments",
+    "placeholder": {
+      "write": "Write a comment...",
+      "login": "Login to comment",
+      "reply": "Write a reply..."
+    },
+    "replyPlaceholder": "Write a reply...",
+    "postButton": "Post Comment",
+    "anonymous": "Anonymous",
+    "replyButton": "Reply",
+    "cancelButton": "Cancel"
+  },
+  "favorite": {
+    "saved": "Saved",
+    "save": "Save"
+  },
+  "subscribe": {
+    "title": "Subscribe",
+    "description": "Get the latest BYD news delivered to your inbox.",
+    "emailPlaceholder": "your@email.com",
+    "placeholder": "your@email.com",
+    "button": "Subscribe",
+    "submit": "Subscribe",
+    "successMessage": "Subscribed successfully!",
+    "success": "Subscribed successfully!",
+    "errorMessage": "Subscription failed",
+    "error": "Subscription failed",
+    "genericError": "An error occurred"
+  },
+  "footer": {
+    "brandDescription": "Independent global news aggregation and data intelligence platform for BYD automotive developments. Tracking sales, technology, and market expansion across 78+ countries.",
+    "feature": {
+      "languages": "10 Languages",
+      "realtime": "Real-time Data",
+      "aiTranslation": "AI Translation"
+    },
+    "links": {
+      "platform": "Platform",
+      "latestNews": "Latest News",
+      "dataDashboard": "Data Dashboard",
+      "search": "Search",
+      "about": "About"
+    },
+    "allRightsReserved": "All rights reserved.",
+    "dataSource": "Data sourced from public news and official BYD reports."
+  },
+  "error": {
+    "title": "Something went wrong!",
+    "retryButton": "Try again"
+  },
+  "loading": "Loading...",
+  "common": {
+    "category": {
+      "news": "News"
+    },
+    "unknown": "Unknown",
+    "errorOccurred": "An error occurred",
+    "emptyStateTitle": "No content yet",
+    "emptyStateDescription": "Check back later for updates."
+  },
+  "time": {
+    "justNow": "just now",
+    "minutesAgo": "m ago",
+    "hoursAgo": "h ago",
+    "daysAgo": "d ago"
   }
 }

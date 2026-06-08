@@ -2,11 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Heart } from 'lucide-react';
 
 export default function FavoriteButton({ newsId }: { newsId: number }) {
   const { data: session } = useSession();
+  const t = useTranslations('favorite');
   const [isFavorited, setIsFavorited] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -42,7 +44,7 @@ export default function FavoriteButton({ newsId }: { newsId: number }) {
       className={isFavorited ? 'text-red-500' : 'text-slate-400'}
     >
       <Heart className={`w-5 h-5 ${isFavorited ? 'fill-current' : ''}`} />
-      <span className="ml-1">{isFavorited ? 'Saved' : 'Save'}</span>
+      <span className="ml-1">{isFavorited ? t('saved') : t('save')}</span>
     </Button>
   );
 }

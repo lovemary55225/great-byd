@@ -26,7 +26,7 @@ export default async function NewsPage({ params, searchParams }: { params: Promi
       {/* Page Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white mb-2">{t('allNews')}</h1>
-        <p className="text-slate-400">Stay updated with the latest BYD developments worldwide.</p>
+        <p className="text-slate-400">{t('pageDescription')}</p>
       </div>
 
       {/* Category Filter */}
@@ -37,7 +37,7 @@ export default async function NewsPage({ params, searchParams }: { params: Promi
             !categorySlug ? 'bg-[#e31937] text-white' : 'bg-[#1e1e2e] text-slate-300 hover:bg-[#2a2a3e]'
           }`}
         >
-          All
+          {t('filter.all')}
         </a>
         {allCategories.map((cat) => (
           <a
@@ -54,7 +54,7 @@ export default async function NewsPage({ params, searchParams }: { params: Promi
 
       {/* News Grid */}
       {allNews.length === 0 ? (
-        <EmptyState title="No articles found" description="Try selecting a different category or check back later." />
+        <EmptyState title={t('emptyState.title')} description={t('emptyState.description')} />
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {allNews.map((item) => (

@@ -39,14 +39,14 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           icon={Car}
         />
         <KPICard
-          title="Global Markets"
+          title={t('kpi.globalMarkets')}
           value="78"
-          change="3 new"
+          change={t('kpi.globalMarketsChange')}
           isPositive
           icon={Globe}
         />
         <KPICard
-          title="Charging Stations"
+          title={t('kpi.chargingStations')}
           value="12,000+"
           change="8.3%"
           isPositive
@@ -60,7 +60,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           <h2 className="text-2xl font-bold text-white">{t('latestNews')}</h2>
         </div>
         {latestNews.length === 0 ? (
-          <EmptyState title="No news yet" description="News articles will appear here once they are fetched from RSS sources." />
+          <EmptyState title={t('emptyState.title')} description={t('emptyState.description')} />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {latestNews.map((item) => (
@@ -72,7 +72,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
                 summary={item.summary}
                 imageUrl={item.imageUrl}
                 publishedAt={item.publishedAt}
-                category={(item.category as Category | undefined)?.nameEn || 'News'}
+                category={(item.category as Category | undefined)?.nameEn || t('common.category.news')}
               />
             ))}
           </div>

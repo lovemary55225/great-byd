@@ -13,33 +13,187 @@
   "home": {
     "latestNews": "最新资讯",
     "salesOverview": "销量概览",
-    "chargingProgress": "闪充桩进度"
+    "chargingProgress": "充电站进度",
+    "hero": {
+      "badge": "全球BYD情报",
+      "title": "追踪BYD的",
+      "titleHighlight": "全球崛起",
+      "subtitle": "实时新闻聚合、销量分析和市场情报，聚焦全球领先的新能源汽车制造商。",
+      "ctaNews": "浏览新闻",
+      "ctaData": "查看数据",
+      "stat": {
+        "marketsLabel": "市场",
+        "salesLabel": "年销量",
+        "chargingLabel": "充电站"
+      }
+    },
+    "kpi": {
+      "globalMarkets": "全球市场",
+      "globalMarketsChange": "新增3个",
+      "chargingStations": "充电站"
+    },
+    "emptyState": {
+      "title": "暂无新闻",
+      "description": "从RSS源获取新闻后，文章将显示在此处。"
+    }
   },
   "news": {
     "allNews": "全部新闻",
     "readMore": "阅读更多",
     "source": "来源",
-    "publishedAt": "发布时间"
+    "publishedAt": "发布时间",
+    "pageDescription": "及时了解全球BYD最新动态。",
+    "filter": {
+      "all": "全部"
+    },
+    "emptyState": {
+      "title": "未找到文章",
+      "description": "请尝试选择其他分类或稍后返回查看。"
+    }
+  },
+  "newsDetail": {
+    "originalLink": "原文链接 →",
+    "comments": "评论"
   },
   "data": {
     "salesTrend": "销量趋势",
     "salesByCountry": "各国销量排行",
     "salesByModel": "车型销量排行",
-    "chargingStations": "充电站分布"
+    "chargingStations": "充电站分布",
+    "pageDescription": "全面的销量分析和充电基础设施数据。",
+    "chart": {
+      "salesTrendDesc": "月度全球销量",
+      "salesByCountryDesc": "按销量排名的主要市场",
+      "salesByModelDesc": "国内与海外销量对比",
+      "chargingDesc": "全球充电基础设施进展"
+    },
+    "table": {
+      "country": "国家",
+      "stations": "充电站",
+      "target": "目标",
+      "progress": "进度",
+      "status": "状态"
+    }
   },
   "search": {
     "placeholder": "搜索新闻...",
     "results": "搜索结果"
   },
   "categories": {
-    "newCar": "新车发布",
+    "new-car": "新车发布",
     "sales": "销量数据",
     "technology": "技术发布",
-    "charging": "闪充桩",
+    "charging": "充电站",
     "overseas": "海外市场"
   },
   "favorites": {
     "title": "我的收藏",
     "empty": "暂无收藏。"
+  },
+  "login": {
+    "title": "登录",
+    "emailLabel": "邮箱",
+    "passwordLabel": "密码",
+    "loggingIn": "正在登录...",
+    "errorInvalid": "邮箱或密码无效",
+    "noAccount": "还没有账号？",
+    "registerLink": "注册"
+  },
+  "register": {
+    "title": "注册",
+    "nameLabel": "姓名",
+    "emailLabel": "邮箱",
+    "passwordLabel": "密码",
+    "registering": "正在注册...",
+    "errorFailed": "注册失败",
+    "hasAccount": "已有账号？",
+    "loginLink": "登录"
+  },
+  "about": {
+    "title": "关于Great BYD",
+    "intro1": "Great BYD是一个独立的新闻聚合平台，致力于追踪BYD在全球汽车领域的发展动态。",
+    "intro2": "我们收集并整理来自BYD官方渠道、汽车媒体及全球公开数据源的新闻，涵盖以下内容：",
+    "list": {
+      "newCar": "新车发布及产品更新",
+      "salesData": "全球销量数据及市场分析",
+      "technology": "技术突破与创新",
+      "charging": "充电基础设施扩展",
+      "overseas": "海外市场进入战略"
+    },
+    "dataSources": {
+      "title": "数据来源",
+      "description": "新闻文章通过RSS订阅和公开API聚合。销量数据来源于各国官方行业报告及汽车协会。"
+    },
+    "disclaimer": {
+      "title": "免责声明",
+      "description": "这是一个非官方的粉丝项目。所有数据和新闻均来自公开信息。BYD及相关商标归其各自所有者所有。"
+    }
+  },
+  "comments": {
+    "title": "评论",
+    "placeholder": {
+      "write": "写评论...",
+      "login": "登录后评论",
+      "reply": "写回复..."
+    },
+    "replyPlaceholder": "写回复...",
+    "postButton": "发表评论",
+    "anonymous": "匿名用户",
+    "replyButton": "回复",
+    "cancelButton": "取消"
+  },
+  "favorite": {
+    "saved": "已收藏",
+    "save": "收藏"
+  },
+  "subscribe": {
+    "title": "订阅",
+    "description": "将最新BYD新闻直接发送到您的邮箱。",
+    "emailPlaceholder": "your@email.com",
+    "placeholder": "your@email.com",
+    "button": "订阅",
+    "submit": "订阅",
+    "successMessage": "订阅成功！",
+    "success": "订阅成功！",
+    "errorMessage": "订阅失败",
+    "error": "订阅失败",
+    "genericError": "发生错误"
+  },
+  "footer": {
+    "brandDescription": "独立的全球新闻聚合与数据情报平台，聚焦BYD汽车发展动态。追踪78个以上国家的销量、技术及市场扩展情况。",
+    "feature": {
+      "languages": "10种语言",
+      "realtime": "实时数据",
+      "aiTranslation": "AI翻译"
+    },
+    "links": {
+      "platform": "平台",
+      "latestNews": "最新资讯",
+      "dataDashboard": "数据面板",
+      "search": "搜索",
+      "about": "关于"
+    },
+    "allRightsReserved": "保留所有权利。",
+    "dataSource": "数据来源于公开新闻及BYD官方报告。"
+  },
+  "error": {
+    "title": "出错了！",
+    "retryButton": "重试"
+  },
+  "loading": "加载中...",
+  "common": {
+    "category": {
+      "news": "新闻"
+    },
+    "unknown": "未知",
+    "errorOccurred": "发生错误",
+    "emptyStateTitle": "暂无内容",
+    "emptyStateDescription": "请稍后回来查看更新。"
+  },
+  "time": {
+    "justNow": "刚刚",
+    "minutesAgo": "分钟前",
+    "hoursAgo": "小时前",
+    "daysAgo": "天前"
   }
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Clock, ArrowUpRight } from 'lucide-react';
 
 interface NewsCardProps {
@@ -14,6 +14,7 @@ interface NewsCardProps {
 
 export default function NewsCard({ slug, title, summary, imageUrl, publishedAt, category }: NewsCardProps) {
   const locale = useLocale();
+  const t = useTranslations('common');
 
   return (
     <Link href={`/${locale}/news/${slug}`} className="group block">
@@ -28,7 +29,7 @@ export default function NewsCard({ slug, title, summary, imageUrl, publishedAt, 
             />
           ) : (
             <div className="w-full h-full bg-gradient-to-br from-[#1e1e2e] to-[#0a0a0f] flex items-center justify-center">
-              <span className="text-slate-600 text-sm">No Image</span>
+              <span className="text-slate-600 text-sm">{t('noImage')}</span>
             </div>
           )}
           {/* Category badge */}

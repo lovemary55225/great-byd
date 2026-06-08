@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { db } from '@/lib/db';
 import { news, type Category } from '@/lib/db/schema';
@@ -7,6 +8,7 @@ import FavoriteButton from '@/components/news/FavoriteButton';
 
 export default async function NewsDetailPage({ params }: { params: Promise<{ lang: string; slug: string }> }) {
   const { lang, slug } = await params;
+  const t = await getTranslations('news');
 
   const article = await db.query.news.findFirst({
     where: eq(news.slug, slug),
@@ -24,7 +26,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ lan
           <div className="flex items-center gap-4 text-slate-400 text-sm">
             <span>{new Date(article.publishedAt).toLocaleDateString(lang)}</span>
             {article.originalUrl && (
-              <a href={article.originalUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">原文链接 →</a>
+              <a href={article.originalUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">{t('originalLink')} →</a>
             )}
           </div>
           <FavoriteButton newsId={article.id} />

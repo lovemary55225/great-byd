@@ -1,45 +1,199 @@
 {
   "nav": {
-    "home": "Home",
-    "news": "News",
-    "data": "Data",
-    "search": "Search",
-    "about": "About",
+    "home": "Inicio",
+    "news": "Noticias",
+    "data": "Datos",
+    "search": "Buscar",
+    "about": "Acerca de",
     "login": "Iniciar sesión",
     "register": "Registrarse",
     "logout": "Cerrar sesión",
     "favorites": "Favoritos"
   },
   "home": {
-    "latestNews": "Latest News",
-    "salesOverview": "Sales Overview",
-    "chargingProgress": "Charging Progress"
+    "latestNews": "Últimas Noticias",
+    "salesOverview": "Resumen de Ventas",
+    "chargingProgress": "Progreso de Carga",
+    "hero": {
+      "badge": "Inteligencia Global de BYD",
+      "title": "Rastrea el",
+      "titleHighlight": "Ascenso Global",
+      "subtitle": "Agregación de noticias en tiempo real, análisis de ventas e inteligencia de mercado para el principal fabricante de NEV del mundo.",
+      "ctaNews": "Explorar Noticias",
+      "ctaData": "Ver Datos",
+      "stat": {
+        "marketsLabel": "Mercados",
+        "salesLabel": "Ventas Anuales",
+        "chargingLabel": "Estaciones de Carga"
+      }
+    },
+    "kpi": {
+      "globalMarkets": "Mercados Globales",
+      "globalMarketsChange": "3 nuevos",
+      "chargingStations": "Estaciones de Carga"
+    },
+    "emptyState": {
+      "title": "Aún no hay noticias",
+      "description": "Los artículos de noticias aparecerán aquí una vez que se obtengan de las fuentes RSS."
+    }
   },
   "news": {
-    "allNews": "All News",
-    "readMore": "Read More",
-    "source": "Source",
-    "publishedAt": "Published At"
+    "allNews": "Todas las Noticias",
+    "readMore": "Leer Más",
+    "source": "Fuente",
+    "publishedAt": "Publicado el",
+    "pageDescription": "Mantente al día con los últimos desarrollos de BYD en todo el mundo.",
+    "filter": {
+      "all": "Todas"
+    },
+    "emptyState": {
+      "title": "No se encontraron artículos",
+      "description": "Intenta seleccionar una categoría diferente o vuelve más tarde."
+    }
+  },
+  "newsDetail": {
+    "originalLink": "Artículo Original →",
+    "comments": "Comentarios"
   },
   "data": {
-    "salesTrend": "Sales Trend",
-    "salesByCountry": "Sales by Country",
-    "salesByModel": "Sales by Model",
-    "chargingStations": "Charging Stations"
+    "salesTrend": "Tendencia de Ventas",
+    "salesByCountry": "Ventas por País",
+    "salesByModel": "Ventas por Modelo",
+    "chargingStations": "Estaciones de Carga",
+    "pageDescription": "Análisis exhaustivo de ventas y datos de infraestructura de carga.",
+    "chart": {
+      "salesTrendDesc": "Volumen de ventas global mensual",
+      "salesByCountryDesc": "Principales mercados por volumen",
+      "salesByModelDesc": "Comparación de ventas China vs Extranjero",
+      "chargingDesc": "Progreso de la infraestructura de carga global"
+    },
+    "table": {
+      "country": "País",
+      "stations": "Estaciones",
+      "target": "Objetivo",
+      "progress": "Progreso",
+      "status": "Estado"
+    }
   },
   "search": {
-    "placeholder": "Search news...",
-    "results": "Search Results"
+    "placeholder": "Buscar noticias...",
+    "results": "Resultados de Búsqueda"
   },
   "categories": {
-    "newCar": "New Car Launch",
-    "sales": "Sales Data",
-    "technology": "Technology",
-    "charging": "Charging",
-    "overseas": "Overseas Market"
+    "new-car": "Nuevo Vehículo",
+    "sales": "Ventas",
+    "technology": "Tecnología",
+    "charging": "Carga",
+    "overseas": "Extranjero"
   },
   "favorites": {
     "title": "Mis Favoritos",
     "empty": "Aún no hay favoritos."
+  },
+  "login": {
+    "title": "Iniciar Sesión",
+    "emailLabel": "Correo Electrónico",
+    "passwordLabel": "Contraseña",
+    "loggingIn": "Iniciando sesión...",
+    "errorInvalid": "Correo o contraseña inválidos",
+    "noAccount": "¿No tienes una cuenta?",
+    "registerLink": "Registrarse"
+  },
+  "register": {
+    "title": "Registrarse",
+    "nameLabel": "Nombre",
+    "emailLabel": "Correo Electrónico",
+    "passwordLabel": "Contraseña",
+    "registering": "Registrando...",
+    "errorFailed": "Registro fallido",
+    "hasAccount": "¿Ya tienes una cuenta?",
+    "loginLink": "Iniciar sesión"
+  },
+  "about": {
+    "title": "Acerca de Great BYD",
+    "intro1": "Great BYD es una plataforma independiente de agregación de noticias dedicada a rastrear los desarrollos automotrices globales de BYD.",
+    "intro2": "Recopilamos y curamos noticias de canales oficiales de BYD, medios automotrices y fuentes de datos públicas de todo el mundo, cubriendo:",
+    "list": {
+      "newCar": "Lanzamientos de nuevos vehículos y actualizaciones de productos",
+      "salesData": "Datos de ventas globales y análisis de mercado",
+      "technology": "Avances tecnológicos e innovaciones",
+      "charging": "Expansión de infraestructura de carga",
+      "overseas": "Estrategias de entrada a mercados extranjeros"
+    },
+    "dataSources": {
+      "title": "Fuentes de Datos",
+      "description": "Los artículos de noticias se agregan de fuentes RSS y APIs públicas. Los datos de ventas se compilan de informes oficiales de la industria y asociaciones automotrices en los respectivos países."
+    },
+    "disclaimer": {
+      "title": "Descargo de Responsabilidad",
+      "description": "Este es un proyecto de fans no oficial. Todos los datos y noticias provienen de información disponible públicamente. BYD y las marcas relacionadas pertenecen a sus respectivos propietarios."
+    }
+  },
+  "comments": {
+    "title": "Comentarios",
+    "placeholder": {
+      "write": "Escribe un comentario...",
+      "login": "Inicia sesión para comentar",
+      "reply": "Escribe una respuesta..."
+    },
+    "replyPlaceholder": "Escribe una respuesta...",
+    "postButton": "Publicar Comentario",
+    "anonymous": "Anónimo",
+    "replyButton": "Responder",
+    "cancelButton": "Cancelar"
+  },
+  "favorite": {
+    "saved": "Guardado",
+    "save": "Guardar"
+  },
+  "subscribe": {
+    "title": "Suscribirse",
+    "description": "Recibe las últimas noticias de BYD en tu bandeja de entrada.",
+    "emailPlaceholder": "tu@correo.com",
+    "placeholder": "tu@correo.com",
+    "button": "Suscribirse",
+    "submit": "Suscribirse",
+    "successMessage": "¡Suscripción exitosa!",
+    "success": "¡Suscripción exitosa!",
+    "errorMessage": "Suscripción fallida",
+    "error": "Suscripción fallida",
+    "genericError": "Ocurrió un error"
+  },
+  "footer": {
+    "brandDescription": "Plataforma independiente de agregación de noticias globales e inteligencia de datos para los desarrollos automotrices de BYD. Rastreando ventas, tecnología y expansión de mercado en más de 78 países.",
+    "feature": {
+      "languages": "10 Idiomas",
+      "realtime": "Datos en Tiempo Real",
+      "aiTranslation": "Traducción con IA"
+    },
+    "links": {
+      "platform": "Plataforma",
+      "latestNews": "Últimas Noticias",
+      "dataDashboard": "Panel de Datos",
+      "search": "Buscar",
+      "about": "Acerca de"
+    },
+    "allRightsReserved": "Todos los derechos reservados.",
+    "dataSource": "Datos obtenidos de noticias públicas y reportes oficiales de BYD."
+  },
+  "error": {
+    "title": "¡Algo salió mal!",
+    "retryButton": "Intentar de nuevo"
+  },
+  "loading": "Cargando...",
+  "common": {
+    "category": {
+      "news": "Noticias"
+    },
+    "unknown": "Desconocido",
+    "errorOccurred": "Ocurrió un error",
+    "emptyStateTitle": "Aún no hay contenido",
+    "emptyStateDescription": "Vuelve más tarde para ver actualizaciones."
+  },
+  "time": {
+    "justNow": "ahora mismo",
+    "minutesAgo": "min",
+    "hoursAgo": "h",
+    "daysAgo": "d"
   }
 }

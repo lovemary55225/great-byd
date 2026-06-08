@@ -33,19 +33,19 @@ export default async function DataPage({ params }: { params: Promise<{ lang: str
       {/* Page Header */}
       <div className="mb-10">
         <h1 className="text-3xl font-bold text-white mb-2">{t('salesTrend')}</h1>
-        <p className="text-slate-400">Comprehensive sales analytics and charging infrastructure data.</p>
+        <p className="text-slate-400">{t('pageDescription')}</p>
       </div>
 
       {/* Charts Row 1 */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         <div className="bg-gradient-to-br from-[#13131f] to-[#1a1a2e] border border-[#1e1e2e] rounded-xl p-6">
           <h2 className="text-lg font-semibold text-white mb-1">{t('salesTrend')}</h2>
-          <p className="text-slate-500 text-sm mb-4">Monthly global sales volume</p>
+          <p className="text-slate-500 text-sm mb-4">{t('chart.salesTrendDesc')}</p>
           <SalesTrendChart data={trendData.map((d) => ({ month: d.month, sales: Number(d.sales) }))} />
         </div>
         <div className="bg-gradient-to-br from-[#13131f] to-[#1a1a2e] border border-[#1e1e2e] rounded-xl p-6">
           <h2 className="text-lg font-semibold text-white mb-1">{t('salesByCountry')}</h2>
-          <p className="text-slate-500 text-sm mb-4">Top markets by volume</p>
+          <p className="text-slate-500 text-sm mb-4">{t('chart.salesByCountryDesc')}</p>
           <SalesRankChart data={rankData.map((d) => ({ country: d.country, sales: Number(d.sales) }))} />
         </div>
       </div>
@@ -53,8 +53,8 @@ export default async function DataPage({ params }: { params: Promise<{ lang: str
       {/* Chart Row 2 */}
       <div className="bg-gradient-to-br from-[#13131f] to-[#1a1a2e] border border-[#1e1e2e] rounded-xl p-6 mb-8">
         <h2 className="text-lg font-semibold text-white mb-1">{t('salesByModel')}</h2>
-        <p className="text-slate-500 text-sm mb-4">China vs Overseas sales comparison</p>
-        <ModelComparisonChart data={modelData.map((d) => ({ model: d.model ?? 'Unknown', china: Number(d.china), overseas: Number(d.overseas) }))} />
+        <p className="text-slate-500 text-sm mb-4">{t('chart.salesByModelDesc')}</p>
+        <ModelComparisonChart data={modelData.map((d) => ({ model: d.model ?? t('common.unknown'), china: Number(d.china), overseas: Number(d.overseas) }))} />
       </div>
 
       {/* Charging Stations */}
@@ -62,18 +62,18 @@ export default async function DataPage({ params }: { params: Promise<{ lang: str
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-lg font-semibold text-white mb-1">{t('chargingStations')}</h2>
-            <p className="text-slate-500 text-sm">Global charging infrastructure progress</p>
+            <p className="text-slate-500 text-sm">{t('chart.chargingDesc')}</p>
           </div>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-left">
             <thead>
               <tr className="border-b border-[#1e1e2e]">
-                <th className="pb-3 text-slate-400 text-sm font-medium">Country</th>
-                <th className="pb-3 text-slate-400 text-sm font-medium">Stations</th>
-                <th className="pb-3 text-slate-400 text-sm font-medium">Target</th>
-                <th className="pb-3 text-slate-400 text-sm font-medium">Progress</th>
-                <th className="pb-3 text-slate-400 text-sm font-medium">Status</th>
+                <th className="pb-3 text-slate-400 text-sm font-medium">{t('table.country')}</th>
+                <th className="pb-3 text-slate-400 text-sm font-medium">{t('table.stations')}</th>
+                <th className="pb-3 text-slate-400 text-sm font-medium">{t('table.target')}</th>
+                <th className="pb-3 text-slate-400 text-sm font-medium">{t('table.progress')}</th>
+                <th className="pb-3 text-slate-400 text-sm font-medium">{t('table.status')}</th>
               </tr>
             </thead>
             <tbody>

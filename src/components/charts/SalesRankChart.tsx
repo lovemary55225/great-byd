@@ -1,10 +1,12 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
 const colors = ['#e31937', '#dc2626', '#ef4444', '#f87171', '#fca5a5', '#fb923c', '#fbbf24', '#a3e635', '#34d399', '#22d3ee'];
 
 export default function SalesRankChart({ data }: { data: { country: string; sales: number }[] }) {
+  const t = useTranslations('data');
   return (
     <div className="h-[320px] w-full">
       <ResponsiveContainer width="100%" height="100%">
@@ -15,7 +17,7 @@ export default function SalesRankChart({ data }: { data: { country: string; sale
           <Tooltip
             contentStyle={{ backgroundColor: '#13131f', border: '1px solid #1e1e2e', borderRadius: '12px' }}
             labelStyle={{ color: '#e2e8f0' }}
-            formatter={(value) => [`${Number(value).toLocaleString()} units`, 'Sales']}
+            formatter={(value) => [`${Number(value).toLocaleString()} ${t('chart.units')}`, t('chart.sales')]}
           />
           <Bar dataKey="sales" radius={[0, 6, 6, 0]}>
             {data.map((_, index) => (

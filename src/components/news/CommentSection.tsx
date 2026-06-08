@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useSession } from 'next-auth/react';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { formatDistanceToNow } from '@/lib/utils';
@@ -17,6 +18,7 @@ interface Comment {
 
 export default function CommentSection({ newsId }: { newsId: number }) {
   const { data: session } = useSession();
+  const t = useTranslations('comments');
   const [commentList, setCommentList] = useState<Comment[]>([]);
   const [content, setContent] = useState('');
   const [replyTo, setReplyTo] = useState<number | null>(null);
@@ -74,19 +76,19 @@ export default function CommentSection({ newsId }: { newsId: number }) {
 
   return (
     <div className="mt-10 pt-8 border-t border-[#1e1e2e]">
-      <h3 className="text-xl font-bold text-white mb-6">Comments</h3>
+      <h3 className="text-xl font-bold text-white mb-6">{t('title')}</h3>
 
       <form onSubmit={handleSubmit} className="mb-8">
         <Textarea
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          placeholder={session ? 'Write a comment...' : 'Login to comment'}
+          placeholder={session ? t('placeholder.write') : t('placeholder.login')}
           disabled={!session || loading}
           className="bg-[#0a0a0f] border-[#1e1e2e] text-white mb-3"
           rows={3}
         />
         <Button type="submit" disabled={!session || loading || !content.trim()}>
-          Post Comment
+          {t('postComment')}
         </Button>
       </form>
 
@@ -97,7 +99,7 @@ export default function CommentSection({ newsId }: { newsId: number }) {
               <div className="w-8 h-8 rounded-full bg-[#e31937] flex items-center justify-center text-white text-xs font-bold">
                 {comment.user?.name?.[0] || 'A'}
               </div>
-              <span className="text-sm font-medium text-white">{comment.user?.name || 'Anonymous'}</span>
+              <span className="text-sm font-medium text-white">{comment.user?.name || t('anonymous')}</span>
               <span className="text-xs text-slate-500">
                 {formatDistanceToNow(new Date(comment.createdAt))}
               </span>
@@ -108,7 +110,7 @@ export default function CommentSection({ newsId }: { newsId: number }) {
                 onClick={() => setReplyTo(replyTo === comment.id ? null : comment.id)}
                 className="text-xs text-blue-400 hover:underline"
               >
-                {replyTo === comment.id ? 'Cancel' : 'Reply'}
+                {replyTo === comment.id ? t('cancel') : t('reply')}
               </button>
             )}
 
@@ -117,12 +119,12 @@ export default function CommentSection({ newsId }: { newsId: number }) {
                 <Textarea
                   value={replyContent}
                   onChange={(e) => setReplyContent(e.target.value)}
-                  placeholder="Write a reply..."
+                  placeholder={t('replyPlaceholder')}
                   className="bg-[#0a0a0f] border-[#1e1e2e] text-white mb-2"
                   rows={2}
                 />
                 <Button size="sm" disabled={loading || !replyContent.trim()}>
-                  Reply
+                  {t('reply')}
                 </Button>
               </form>
             )}
@@ -135,7 +137,7 @@ export default function CommentSection({ newsId }: { newsId: number }) {
                       <div className="w-6 h-6 rounded-full bg-slate-700 flex items-center justify-center text-white text-xs font-bold">
                         {reply.user?.name?.[0] || 'A'}
                       </div>
-                      <span className="text-sm font-medium text-white">{reply.user?.name || 'Anonymous'}</span>
+                      <span className="text-sm font-medium text-white">{reply.user?.name || t('anonymous')}</span>
                       <span className="text-xs text-slate-500">
                         {formatDistanceToNow(new Date(reply.createdAt))}
                       </span>

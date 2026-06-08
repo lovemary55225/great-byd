@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import { db } from '@/lib/db';
 import { news } from '@/lib/db/schema';
 import { sql } from 'drizzle-orm';
@@ -6,6 +7,7 @@ import NewsCard from '@/components/news/NewsCard';
 export default async function SearchPage({ params, searchParams }: { params: Promise<{ lang: string }>; searchParams: Promise<{ q?: string }> }) {
   const { lang } = await params;
   const { q } = await searchParams;
+  const t = await getTranslations('search');
 
   let results: any[] = [];
   if (q) {
@@ -21,14 +23,14 @@ export default async function SearchPage({ params, searchParams }: { params: Pro
           type="search"
           name="q"
           defaultValue={q || ''}
-          placeholder="Search news..."
+          placeholder={t('placeholder')}
           className="w-full max-w-xl bg-[#13131f] border border-[#1e1e2e] rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-[#e31937]"
         />
       </form>
 
       {q && (
         <>
-          <p className="text-slate-400 mb-6">Found {results.length} results for "{q}".</p>
+          <p className="text-slate-400 mb-6">{t('results', { count: results.length, query: q })}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {results.map((item) => (
               <NewsCard key={item.id} {...item} category="" />
