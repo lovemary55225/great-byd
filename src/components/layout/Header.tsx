@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { useSession, signOut } from 'next-auth/react';
 import LanguageSwitcher from './LanguageSwitcher';
+import { Button } from '@/components/ui/button';
 
 export default function Header({ locale }: { locale: string }) {
   const t = useTranslations('nav');
+  const { data: session, status } = useSession();
 
   const navItems = [
     { href: '/', label: t('home') },
@@ -31,7 +34,29 @@ export default function Header({ locale }: { locale: string }) {
               </Link>
             ))}
           </nav>
-          <LanguageSwitcher currentLocale={locale} />
+          <div className="flex items-center gap-4">
+            {status === 'authenticated' && session?.user ? (
+              <div className="flex items-center gap-3">
+                <Link href={`/${locale}/favorites`} className="text-slate-300 hover:text-white text-sm hidden md:block">
+                  {t('favorites')}
+                </Link>
+                <span className="text-sm text-slate-300">{session.user.name || session.user.email}</span>
+                <Button variant="outline" size="sm" onClick={() => signOut()}>
+                  {t('logout')}
+                </Button>
+              </div>
+            ) : (
+              <div className="flex items-center gap-2">
+                <Link href={`/${locale}/login`}>
+                  <Button variant="ghost" size="sm">{t('login')}</Button>
+                </Link>
+                <Link href={`/${locale}/register`}>
+                  <Button size="sm">{t('register')}</Button>
+                </Link>
+              </div>
+            )}
+            <LanguageSwitcher currentLocale={locale} />
+          </div>
         </div>
       </div>
     </header>

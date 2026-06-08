@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { db } from '@/lib/db';
-import { news } from '@/lib/db/schema';
+import { news, type Category } from '@/lib/db/schema';
 import { desc } from 'drizzle-orm';
 import NewsCard from '@/components/news/NewsCard';
 
@@ -19,7 +19,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
       <h1 className="text-3xl font-bold text-white mb-8">{t('allNews')}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {allNews.map((item) => (
-          <NewsCard key={item.id} {...item} category={item.category?.nameEn || ''} />
+          <NewsCard key={item.id} {...item} category={(item.category as Category | undefined)?.nameEn || ''} />
         ))}
       </div>
     </div>

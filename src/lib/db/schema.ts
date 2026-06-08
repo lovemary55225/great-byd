@@ -1,4 +1,4 @@
-import { pgTable, serial, varchar, text, timestamp, integer, boolean, jsonb, unique } from 'drizzle-orm/pg-core';
+import { pgTable, serial, varchar, text, timestamp, integer, boolean, jsonb, unique, foreignKey } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 
 export const categories = pgTable('categories', {
@@ -90,4 +90,74 @@ export const sourcesRelations = relations(sources, ({ one, many }) => ({
 export const categoriesRelations = relations(categories, ({ many }) => ({
   news: many(news),
   sources: many(sources),
+}));
+
+export type Category = typeof categories.$inferSelect;
+
+export const users = pgTable('users', {
+  id: serial('id').primaryKey(),
+  email: varchar('email', { length: 255 }).notNull().unique(),
+  name: varchar('name', { length: 100 }),
+  avatar: varchar('avatar', { length: 500 }),
+  passwordHash: varchar('password_hash', { length: 255 }),
+  createdAt: timestamp('created_at').defaultNow(),
+});
+
+export const comments = pgTable('comments', {
+  id: serial('id').primaryKey(),
+  newsId: integer('news_id').notNull(),
+  userId: integer('user_id'),
+  parentId: integer('parent_id'),
+  content: text('content').notNull(),
+  createdAt: timestamp('created_at').defaultNow(),
+}, (table) => ({
+  newsFk: foreignKey({
+    columns: [table.newsId],
+    foreignColumns: [news.id],
+  }).onDelete('cascade'),
+  userFk: foreignKey({
+    columns: [table.userId],
+    foreignColumns: [users.id],
+  }).onDelete('cascade'),
+  parentFk: foreignKey({
+    columns: [table.parentId],
+    foreignColumns: [table.id],
+  }).onDelete('cascade'),
+}));
+
+export const favorites = pgTable('favorites', {
+  id: serial('id').primaryKey(),
+  userId: integer('user_id').notNull(),
+  newsId: integer('news_id').notNull(),
+  createdAt: timestamp('created_at').defaultNow(),
+}, (t) => ({
+  unq: unique().on(t.userId, t.newsId),
+  userFk: foreignKey({
+    columns: [t.userId],
+    foreignColumns: [users.id],
+  }).onDelete('cascade'),
+  newsFk: foreignKey({
+    columns: [t.newsId],
+    foreignColumns: [news.id],
+  }).onDelete('cascade'),
+}));
+
+export const subscriptions = pgTable('subscriptions', {
+  id: serial('id').primaryKey(),
+  email: varchar('email', { length: 255 }).notNull().unique(),
+  categories: jsonb('categories').default('[]'),
+  frequency: varchar('frequency', { length: 20 }).default('daily'), // daily, weekly
+  createdAt: timestamp('created_at').defaultNow(),
+});
+
+export const usersRelations = relations(users, ({ many }) => ({
+  comments: many(comments),
+  favorites: many(favorites),
+}));
+
+export const commentsRelations = relations(comments, ({ one, many }) => ({
+  news: one(news, { fields: [comments.newsId], references: [news.id] }),
+  user: one(users, { fields: [comments.userId], references: [users.id] }),
+  parent: one(comments, { fields: [comments.parentId], references: [comments.id] }),
+  replies: many(comments),
 }));

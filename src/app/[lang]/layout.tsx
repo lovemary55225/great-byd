@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/lib/i18n/routing';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import AuthProvider from '@/components/providers/AuthProvider';
 
 export default async function LocaleLayout({
   children,
@@ -18,12 +19,14 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <div className="min-h-screen bg-[#0a0a0f] text-slate-200 flex flex-col">
-        <Header locale={lang} />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </div>
-    </NextIntlClientProvider>
+    <AuthProvider>
+      <NextIntlClientProvider messages={messages}>
+        <div className="min-h-screen bg-[#0a0a0f] text-slate-200 flex flex-col">
+          <Header locale={lang} />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
+      </NextIntlClientProvider>
+    </AuthProvider>
   );
 }

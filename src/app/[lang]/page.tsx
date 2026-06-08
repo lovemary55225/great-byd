@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import KPICard from '@/components/ui/KPICard';
 import NewsCard from '@/components/news/NewsCard';
 import { db } from '@/lib/db';
-import { news, salesData } from '@/lib/db/schema';
+import { news, salesData, type Category } from '@/lib/db/schema';
 import { desc, sql } from 'drizzle-orm';
 
 export default async function HomePage({ params }: { params: Promise<{ lang: string }> }) {
@@ -37,7 +37,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               summary={item.summary}
               imageUrl={item.imageUrl}
               publishedAt={item.publishedAt}
-              category={item.category?.nameEn || 'News'}
+              category={(item.category as Category | undefined)?.nameEn || 'News'}
             />
           ))}
         </div>
