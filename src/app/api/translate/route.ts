@@ -3,6 +3,11 @@ import { db } from '@/lib/db';
 import { news, newsTranslations } from '@/lib/db/schema';
 import { eq, and } from 'drizzle-orm';
 
+function isTranslationServiceAvailable(): boolean {
+  const key = process.env.DEEPL_API_KEY?.trim();
+  return Boolean(key && key !== 'your-deepl-api-key');
+}
+
 async function translateWithDeepL(text: string, targetLang: string) {
   const response = await fetch('https://api-free.deepl.com/v2/translate', {
     method: 'POST',
@@ -22,6 +27,13 @@ async function translateWithDeepL(text: string, targetLang: string) {
 }
 
 export async function POST(request: Request) {
+  if (!isTranslationServiceAvailable()) {
+    return NextResponse.json(
+      { error: 'Translation service not configured' },
+      { status: 503 }
+    );
+  }
+
   try {
     const { newsId, targetLang } = await request.json();
 
@@ -50,7 +62,7 @@ export async function POST(request: Request) {
       : null;
 
     if (!translatedTitle) {
-      return NextResponse.json({ error: 'Translation failed' }, { status: 500 });
+      return NextResponse.json({ error: 'Translation failed' }, { status: 502 });
     }
 
     const [translation] = await db.insert(newsTranslations).values({
@@ -62,6 +74,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ translation });
   } catch (error) {
+    console.error('Translation error:', error);
     return NextResponse.json({ error: 'Internal error' }, { status: 500 });
   }
 }
