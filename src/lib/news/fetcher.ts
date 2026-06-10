@@ -1,6 +1,5 @@
 import Parser from 'rss-parser';
 import * as cheerio from 'cheerio';
-import crypto from 'crypto';
 import { db } from '@/lib/db';
 import { news, sources } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
@@ -30,9 +29,23 @@ async function extractArticleContent(url: string) {
   }
 }
 
+function simpleHash(str: string): string {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash |= 0;
+  }
+  return Math.abs(hash).toString(16).padStart(8, '0').slice(0, 8);
+}
+
 function generateUniqueSlug(url: string, title: string): string {
-  const base = url.replace(/[^a-zA-Z0-9]/g, '-').slice(0, 80);
-  const hash = crypto.createHash('md5').update(url + title).digest('hex').slice(0, 8);
+  const base = url
+    .replace(/[^a-zA-Z0-9]/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/-+$/, '')
+    .slice(0, 80);
+  const hash = simpleHash(url + title);
   return `${base}-${hash}`;
 }
 
