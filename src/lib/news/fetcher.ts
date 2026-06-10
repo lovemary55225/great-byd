@@ -1,5 +1,6 @@
 import Parser from 'rss-parser';
 import * as cheerio from 'cheerio';
+import crypto from 'crypto';
 import { db } from '@/lib/db';
 import { news, sources } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
@@ -29,6 +30,12 @@ async function extractArticleContent(url: string) {
   }
 }
 
+function generateUniqueSlug(url: string, title: string): string {
+  const base = url.replace(/[^a-zA-Z0-9]/g, '-').slice(0, 80);
+  const hash = crypto.createHash('md5').update(url + title).digest('hex').slice(0, 8);
+  return `${base}-${hash}`;
+}
+
 export async function fetchNewsFromRSS() {
   const activeSources = await db.query.sources.findMany({
     where: eq(sources.isActive, true),
@@ -42,10 +49,10 @@ export async function fetchNewsFromRSS() {
     try {
       const feed = await rssParser.parseURL(source.rssUrl);
 
-      for (const item of feed.items.slice(0, 10)) {
+      for (const item of feed.items.slice(0, 5)) {
         if (!item.title || !item.link) continue;
 
-        const slug = item.link.replace(/[^a-zA-Z0-9]/g, '-').slice(0, 100);
+        const slug = generateUniqueSlug(item.link, item.title);
 
         const existing = await db.query.news.findFirst({
           where: eq(news.slug, slug),
