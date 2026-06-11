@@ -92,22 +92,29 @@
   },
   "login": {
     "title": "登录",
-    "emailLabel": "邮箱",
-    "passwordLabel": "密码",
-    "loggingIn": "正在登录...",
-    "errorInvalid": "邮箱或密码无效",
     "noAccount": "还没有账号？",
-    "registerLink": "注册"
+    "email": "邮箱",
+    "password": "密码",
+    "loading": "正在登录...",
+    "submit": "登录",
+    "error": {
+      "invalidCredentials": "邮箱或密码无效"
+    },
+    "register": "注册"
   },
   "register": {
     "title": "注册",
-    "nameLabel": "姓名",
-    "emailLabel": "邮箱",
-    "passwordLabel": "密码",
-    "registering": "正在注册...",
-    "errorFailed": "注册失败",
     "hasAccount": "已有账号？",
-    "loginLink": "登录"
+    "name": "姓名",
+    "email": "邮箱",
+    "password": "密码",
+    "loading": "正在注册...",
+    "submit": "注册",
+    "error": {
+      "failed": "注册失败",
+      "generic": "发生错误"
+    },
+    "login": "登录"
   },
   "about": {
     "title": "关于Great BYD",

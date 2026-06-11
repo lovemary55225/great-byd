@@ -92,22 +92,29 @@
   },
   "login": {
     "title": "Entrar",
-    "emailLabel": "E-mail",
-    "passwordLabel": "Senha",
-    "loggingIn": "Entrando...",
-    "errorInvalid": "E-mail ou senha inválidos",
     "noAccount": "Não tem uma conta?",
-    "registerLink": "Registrar"
+    "email": "E-mail",
+    "password": "Senha",
+    "loading": "Entrando...",
+    "submit": "Entrar",
+    "error": {
+      "invalidCredentials": "E-mail ou senha inválidos"
+    },
+    "register": "Registrar"
   },
   "register": {
     "title": "Registrar",
-    "nameLabel": "Nome",
-    "emailLabel": "E-mail",
-    "passwordLabel": "Senha",
-    "registering": "Registrando...",
-    "errorFailed": "Falha no registro",
     "hasAccount": "Já tem uma conta?",
-    "loginLink": "Entrar"
+    "name": "Nome",
+    "email": "E-mail",
+    "password": "Senha",
+    "loading": "Registrando...",
+    "submit": "Registrar",
+    "error": {
+      "failed": "Falha no registro",
+      "generic": "Ocorreu um erro"
+    },
+    "login": "Entrar"
   },
   "about": {
     "title": "Sobre o Great BYD",

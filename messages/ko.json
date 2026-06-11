@@ -92,22 +92,29 @@
   },
   "login": {
     "title": "로그인",
-    "emailLabel": "이메일",
-    "passwordLabel": "비밀번호",
-    "loggingIn": "로그인 중...",
-    "errorInvalid": "이메일 또는 비밀번호가 잘못되었습니다",
     "noAccount": "계정이 없으신가요?",
-    "registerLink": "회원가입"
+    "email": "이메일",
+    "password": "비밀번호",
+    "loading": "로그인 중...",
+    "submit": "로그인",
+    "error": {
+      "invalidCredentials": "이메일 또는 비밀번호가 잘못되었습니다"
+    },
+    "register": "회원가입"
   },
   "register": {
     "title": "회원가입",
-    "nameLabel": "이름",
-    "emailLabel": "이메일",
-    "passwordLabel": "비밀번호",
-    "registering": "가입 중...",
-    "errorFailed": "회원가입에 실패했습니다",
     "hasAccount": "이미 계정이 있으신가요?",
-    "loginLink": "로그인"
+    "name": "이름",
+    "email": "이메일",
+    "password": "비밀번호",
+    "loading": "가입 중...",
+    "submit": "회원가입",
+    "error": {
+      "failed": "회원가입에 실패했습니다",
+      "generic": "오류가 발생했습니다"
+    },
+    "login": "로그인"
   },
   "about": {
     "title": "Great BYD 소개",

@@ -92,22 +92,29 @@
   },
   "login": {
     "title": "تسجيل الدخول",
-    "emailLabel": "البريد الإلكتروني",
-    "passwordLabel": "كلمة المرور",
-    "loggingIn": "جاري تسجيل الدخول...",
-    "errorInvalid": "البريد الإلكتروني أو كلمة المرور غير صالحة",
     "noAccount": "ليس لديك حساب؟",
-    "registerLink": "التسجيل"
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "loading": "جاري تسجيل الدخول...",
+    "submit": "تسجيل الدخول",
+    "error": {
+      "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صالحة"
+    },
+    "register": "التسجيل"
   },
   "register": {
     "title": "التسجيل",
-    "nameLabel": "الاسم",
-    "emailLabel": "البريد الإلكتروني",
-    "passwordLabel": "كلمة المرور",
-    "registering": "جاري التسجيل...",
-    "errorFailed": "فشل التسجيل",
     "hasAccount": "لديك حساب بالفعل؟",
-    "loginLink": "تسجيل الدخول"
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "loading": "جاري التسجيل...",
+    "submit": "التسجيل",
+    "error": {
+      "failed": "فشل التسجيل",
+      "generic": "حدث خطأ"
+    },
+    "login": "تسجيل الدخول"
   },
   "about": {
     "title": "حول Great BYD",

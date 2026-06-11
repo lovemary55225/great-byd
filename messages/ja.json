@@ -92,22 +92,29 @@
   },
   "login": {
     "title": "ログイン",
-    "emailLabel": "メールアドレス",
-    "passwordLabel": "パスワード",
-    "loggingIn": "ログイン中...",
-    "errorInvalid": "メールアドレスまたはパスワードが無効です",
     "noAccount": "アカウントをお持ちでないですか？",
-    "registerLink": "登録"
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "loading": "ログイン中...",
+    "submit": "ログイン",
+    "error": {
+      "invalidCredentials": "メールアドレスまたはパスワードが無効です"
+    },
+    "register": "登録"
   },
   "register": {
     "title": "登録",
-    "nameLabel": "名前",
-    "emailLabel": "メールアドレス",
-    "passwordLabel": "パスワード",
-    "registering": "登録中...",
-    "errorFailed": "登録に失敗しました",
     "hasAccount": "すでにアカウントをお持ちですか？",
-    "loginLink": "ログイン"
+    "name": "名前",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "loading": "登録中...",
+    "submit": "登録",
+    "error": {
+      "failed": "登録に失敗しました",
+      "generic": "エラーが発生しました"
+    },
+    "login": "ログイン"
   },
   "about": {
     "title": "Great BYDについて",

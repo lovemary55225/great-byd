@@ -92,22 +92,29 @@
   },
   "login": {
     "title": "Вход",
-    "emailLabel": "Эл. почта",
-    "passwordLabel": "Пароль",
-    "loggingIn": "Вход...",
-    "errorInvalid": "Неверная эл. почта или пароль",
     "noAccount": "Нет аккаунта?",
-    "registerLink": "Регистрация"
+    "email": "Эл. почта",
+    "password": "Пароль",
+    "loading": "Вход...",
+    "submit": "Войти",
+    "error": {
+      "invalidCredentials": "Неверная эл. почта или пароль"
+    },
+    "register": "Регистрация"
   },
   "register": {
     "title": "Регистрация",
-    "nameLabel": "Имя",
-    "emailLabel": "Эл. почта",
-    "passwordLabel": "Пароль",
-    "registering": "Регистрация...",
-    "errorFailed": "Ошибка регистрации",
     "hasAccount": "Уже есть аккаунт?",
-    "loginLink": "Вход"
+    "name": "Имя",
+    "email": "Эл. почта",
+    "password": "Пароль",
+    "loading": "Регистрация...",
+    "submit": "Зарегистрироваться",
+    "error": {
+      "failed": "Ошибка регистрации",
+      "generic": "Произошла ошибка"
+    },
+    "login": "Вход"
   },
   "about": {
     "title": "О Great BYD",
