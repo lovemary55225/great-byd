@@ -65,7 +65,11 @@
       "salesTrendDesc": "Monatliches globales Verkaufsvolumen",
       "salesByCountryDesc": "Top-Märkte nach Volumen",
       "salesByModelDesc": "Vergleich China vs Übersee",
-      "chargingDesc": "Fortschritt der globalen Ladeinfrastruktur"
+      "chargingDesc": "Fortschritt der globalen Ladeinfrastruktur",
+      "units": "Einheiten",
+      "sales": "Verkäufe",
+      "china": "China",
+      "overseas": "Ausland"
     },
     "table": {
       "country": "Land",

@@ -12,23 +12,44 @@ export default async function DataPage({ params }: { params: Promise<{ lang: str
   const t = await getTranslations('data');
   const tCommon = await getTranslations('common');
 
-  const trendData = await db.select({
-    month: sql<string>`TO_CHAR(${salesData.year} || '-' || LPAD(${salesData.month}::text, 2, '0'))`,
-    sales: sql<number>`SUM(${salesData.salesCount})`,
-  }).from(salesData).groupBy(salesData.year, salesData.month).orderBy(salesData.year, salesData.month);
+  let trendData: { month: string; sales: number }[] = [];
+  let rankData: { country: string; sales: number }[] = [];
+  let modelData: { model: string | null; china: number; overseas: number }[] = [];
+  let stations: (typeof chargingStations.$inferSelect)[] = [];
 
-  const rankData = await db.select({
-    country: salesData.country,
-    sales: sql<number>`SUM(${salesData.salesCount})`,
-  }).from(salesData).groupBy(salesData.country).orderBy(sql`SUM(${salesData.salesCount}) DESC`).limit(10);
+  try {
+    trendData = await db.select({
+      month: sql<string>`${salesData.year} || '-' || LPAD(${salesData.month}::text, 2, '0')`,
+      sales: sql<number>`SUM(${salesData.salesCount})`,
+    }).from(salesData).groupBy(salesData.year, salesData.month).orderBy(salesData.year, salesData.month);
+  } catch (e) {
+    console.error('Failed to fetch sales trend data:', e);
+  }
 
-  const modelData = await db.select({
-    model: salesData.vehicleModel,
-    china: sql<number>`SUM(CASE WHEN ${salesData.country} = 'China' THEN ${salesData.salesCount} ELSE 0 END)`,
-    overseas: sql<number>`SUM(CASE WHEN ${salesData.country} != 'China' THEN ${salesData.salesCount} ELSE 0 END)`,
-  }).from(salesData).groupBy(salesData.vehicleModel).orderBy(sql`SUM(${salesData.salesCount}) DESC`).limit(8);
+  try {
+    rankData = await db.select({
+      country: salesData.country,
+      sales: sql<number>`SUM(${salesData.salesCount})`,
+    }).from(salesData).groupBy(salesData.country).orderBy(sql`SUM(${salesData.salesCount}) DESC`).limit(10);
+  } catch (e) {
+    console.error('Failed to fetch sales rank data:', e);
+  }
 
-  const stations = await db.select().from(chargingStations).orderBy(chargingStations.country);
+  try {
+    modelData = await db.select({
+      model: salesData.vehicleModel,
+      china: sql<number>`SUM(CASE WHEN ${salesData.country} = 'China' THEN ${salesData.salesCount} ELSE 0 END)`,
+      overseas: sql<number>`SUM(CASE WHEN ${salesData.country} != 'China' THEN ${salesData.salesCount} ELSE 0 END)`,
+    }).from(salesData).groupBy(salesData.vehicleModel).orderBy(sql`SUM(${salesData.salesCount}) DESC`).limit(8);
+  } catch (e) {
+    console.error('Failed to fetch model comparison data:', e);
+  }
+
+  try {
+    stations = await db.select().from(chargingStations).orderBy(chargingStations.country);
+  } catch (e) {
+    console.error('Failed to fetch charging stations:', e);
+  }
 
   const hasAnyData = trendData.length > 0 || rankData.length > 0 || modelData.length > 0 || stations.length > 0;
 

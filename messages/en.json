@@ -65,7 +65,11 @@
       "salesTrendDesc": "Monthly global sales volume",
       "salesByCountryDesc": "Top markets by volume",
       "salesByModelDesc": "China vs Overseas sales comparison",
-      "chargingDesc": "Global charging infrastructure progress"
+      "chargingDesc": "Global charging infrastructure progress",
+      "units": "units",
+      "sales": "Sales",
+      "china": "China",
+      "overseas": "Overseas"
     },
     "table": {
       "country": "Country",

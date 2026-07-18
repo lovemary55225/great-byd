@@ -11,7 +11,7 @@ export default function Error({ reset }: { error: Error; reset: () => void }) {
         onClick={() => reset()}
         className="px-4 py-2 bg-[#e31937] text-white rounded-lg hover:bg-[#c41730] transition-colors"
       >
-        {t('tryAgain')}
+        {t('retryButton')}
       </button>
     </div>
   );

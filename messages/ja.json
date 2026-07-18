@@ -65,7 +65,11 @@
       "salesTrendDesc": "月間グローバル販売台数",
       "salesByCountryDesc": "販売台数別トップ市場",
       "salesByModelDesc": "中国と海外の販売比較",
-      "chargingDesc": "グローバル充電インフラの進捗"
+      "chargingDesc": "グローバル充電インフラの進捗",
+      "units": "台",
+      "sales": "販売台数",
+      "china": "中国",
+      "overseas": "海外"
     },
     "table": {
       "country": "国",

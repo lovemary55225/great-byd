@@ -65,7 +65,11 @@
       "salesTrendDesc": "حجم المبيعات العالمية الشهرية",
       "salesByCountryDesc": "أكبر الأسواق من حيث الحجم",
       "salesByModelDesc": "مقارنة مبيعات الصين والخارج",
-      "chargingDesc": "تقدم البنية التحتية للشحن العالمية"
+      "chargingDesc": "تقدم البنية التحتية للشحن العالمية",
+      "units": "وحدة",
+      "sales": "المبيعات",
+      "china": "الصين",
+      "overseas": "الخارج"
     },
     "table": {
       "country": "الدولة",

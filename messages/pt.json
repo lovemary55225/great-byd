@@ -65,7 +65,11 @@
       "salesTrendDesc": "Volume mensal de vendas globais",
       "salesByCountryDesc": "Principais mercados por volume",
       "salesByModelDesc": "Comparação de vendas China vs Exterior",
-      "chargingDesc": "Progresso da infraestrutura de carregamento global"
+      "chargingDesc": "Progresso da infraestrutura de carregamento global",
+      "units": "unidades",
+      "sales": "Vendas",
+      "china": "China",
+      "overseas": "Exterior"
     },
     "table": {
       "country": "País",

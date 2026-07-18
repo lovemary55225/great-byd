@@ -65,7 +65,11 @@
       "salesTrendDesc": "월간 글로벌 판매량",
       "salesByCountryDesc": "판매량 기준 주요 시장",
       "salesByModelDesc": "중국 대 해외 판매 비교",
-      "chargingDesc": "글로벌 충전 인프라 진행 상황"
+      "chargingDesc": "글로벌 충전 인프라 진행 상황",
+      "units": "대",
+      "sales": "판매량",
+      "china": "중국",
+      "overseas": "해외"
     },
     "table": {
       "country": "국가",

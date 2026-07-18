@@ -65,7 +65,11 @@
       "salesTrendDesc": "月度全球销量",
       "salesByCountryDesc": "按销量排名的主要市场",
       "salesByModelDesc": "国内与海外销量对比",
-      "chargingDesc": "全球充电基础设施进展"
+      "chargingDesc": "全球充电基础设施进展",
+      "units": "辆",
+      "sales": "销量",
+      "china": "国内",
+      "overseas": "海外"
     },
     "table": {
       "country": "国家",

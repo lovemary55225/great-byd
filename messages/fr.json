@@ -65,7 +65,11 @@
       "salesTrendDesc": "Volume mensuel des ventes mondiales",
       "salesByCountryDesc": "Principaux marchés par volume",
       "salesByModelDesc": "Comparaison des ventes Chine vs Étranger",
-      "chargingDesc": "Progrès de l'infrastructure de recharge mondiale"
+      "chargingDesc": "Progrès de l'infrastructure de recharge mondiale",
+      "units": "unités",
+      "sales": "Ventes",
+      "china": "Chine",
+      "overseas": "Export"
     },
     "table": {
       "country": "Pays",
