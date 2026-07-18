@@ -4,6 +4,7 @@ import bcrypt from 'bcryptjs';
 import { db } from './db';
 import { users } from './db/schema';
 import { eq } from 'drizzle-orm';
+import { routing } from './i18n/routing';
 
 declare module 'next-auth' {
   interface Session {
@@ -58,7 +59,7 @@ export const authOptions: NextAuthOptions = {
     strategy: 'jwt',
   },
   pages: {
-    signIn: '/login',
+    signIn: `/${routing.defaultLocale}/login`,
   },
   callbacks: {
     async jwt({ token, user }) {
